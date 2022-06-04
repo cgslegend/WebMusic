@@ -1,0 +1,83 @@
+$backgroundColor: #060a3d;
+$color: #fff;
+$color1: #868aaf;
+$color2: #db3baa;
+$color2-dark: darken($color2, 10%);
+$color2-darker: darken($color2, 30%);
+$color3: #0025f1;
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+
+#player{
+  height: 100vh;
+  overflow: hidden;
+  color: $color;
+  background: $backgroundColor;
+}
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 110px;
+  padding-top: 10px;
+  h1{
+    color: $color;
+    font-size: 30px;
+  }
+  p{
+  color: $color;
+  }
+}
+.balls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  span {
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: $color2-darker;
+    margin: 0 4px;
+
+    &.current {
+      width: 8px;
+      height: 8px;
+      background: $color2;
+    }
+  }
+
+}
+.panels{
+  display: flex;
+  width: 200vw;
+  height: calc(100vh - 270px);
+  transition: transform 0.3s;
+  align-items: center;
+  &.panel1{
+    transform: translateX(0vw);
+  }
+  &.panel2{
+    transform: translateX(-100vw);
+  }
+  .panelEffect{
+    border: 1px solid white;
+  }
+  .effect{
+    width: 100vw;
+
+  }
+  .lyric{
+
+  }
+}
+
+footer{
+  height: 40vh;
+}
