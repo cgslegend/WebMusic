@@ -18,197 +18,226 @@ $color3: #0025f1;
   overflow: hidden;
   color: $color;
   background: $backgroundColor;
-}
 
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 110px;
-  padding-top: 10px;
 
-  h1 {
-    color: $color;
-    font-size: 30px;
-  }
-
-  p {
-    color: $color;
-  }
-}
-
-.balls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-
-  span {
-    display: block;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: $color2-darker;
-    margin: 0 4px;
-
-    &.current {
-      width: 8px;
-      height: 8px;
-      background: $color2;
-    }
-  }
-
-}
-
-.panels {
-  display: flex;
-  width: 200vw;
-  height: calc(100vh - 270px);
-  transition: transform 0.3s;
-  align-items: center;
-
-  &.panel1 {
-    transform: translateX(0vw);
-  }
-
-  &.panel2 {
-    transform: translateX(-100vw);
-  }
-
-  .panelEffect {
-    width: 100vw;
-    height: 100%;
+  header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-  }
-
-  .effect {
-    position: relative;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    height: 40vh;
+    height: 100px;
+    padding-top: 10px;
 
-    > div {
-      background-size: contain;
-      position: absolute;
+    h1 {
+      color: $color;
+      font-size: 30px;
     }
 
-    .effect1 {
-      background: url(../svg/effect-no-move.svg) 0 0 no-repeat;
-      width: 70vw;
-      height: 70vw;
-      animation: rotate 20s linear infinite;
-    }
-
-    .effect2 {
-      background: url(../svg/effect-move1.svg) 0 0 no-repeat;
-      width: 60vw;
-      height: 60vw;
-      animation: rotate 10s linear infinite reverse;
-    }
-
-    .effect3 {
-      background: url(../svg/effect-move2.svg) 0 0 no-repeat;
-      width: 24vw;
-      height: 24vw;
-      animation: rotate 10s linear infinite;
-    }
-  }
-
-  .lyric {
-    text-align: center;
-  }
-
-  p {
-    font-size: 14px;
-    margin-top: 8px;
-    color: $color1;
-
-    &.current {
+    p {
       color: $color;
     }
   }
-}
 
-
-footer {
-  height: 40vh;
-  .buttons {
+  .balls {
     display: flex;
     justify-content: center;
-    svg {
-      width: 24px;
-      height: 24px;
-      margin: 0 20px;
+    align-items: center;
+    margin-top: 20px;
+
+    span {
+      display: block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: $color2-darker;
+      margin: 0 4px;
+
+      &.current {
+        width: 8px;
+        height: 8px;
+        background: $color2;
+      }
     }
+
   }
 
-  .barArea{
-    color: $color1;
-    font-size: 12px;
+  .panels {
     display: flex;
-    padding: 0 20px;
-    margin-top: 20px;
+    width: 200vw;
+    height: calc(100vh - 270px);
+    transition: transform 0.3s;
     align-items: center;
-    .time-start {
-      order: 1;
-      width: 40px;
-    }
-    .time-end {
-      order: 3;
-      width: 40px;
-    }
-    .bar {
-      order: 2;
-      flex: 1;
-      height: 4px;
-      background: $color3;
-      border-radius: 2px;
-      margin: 0 10px;
-      .progress {
-        width: 0;
-        transition: all .2s;
-        height: 100%;
-        border-radius: 2px;
-        background: $color2;
-        position: relative;
 
-        &::after {
-          content: '';
-          position: absolute;
-          right: -8px;
-          top: -7px;
-          display: block;
-          width: 16px;
-          height: 16px;
-          background: url(../svg/progress.svg) 0 0 no-repeat;
-          background-size: contain;
+    &.panel1 {
+      transform: translateX(0vw);
+    }
+
+    &.panel2 {
+      transform: translateX(-100vw);
+    }
+
+    .panelEffect {
+      width: 100vw;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .effect {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40vh;
+
+      > div {
+        background-size: contain;
+        position: absolute;
+      }
+
+      .effect1 {
+        background: url(../svg/effect-no-move.svg) 0 0 no-repeat;
+        width: 70vw;
+        height: 70vw;
+        animation: rotate 20s linear infinite;
+      }
+
+      .effect2 {
+        background: url(../svg/effect-move1.svg) 0 0 no-repeat;
+        width: 60vw;
+        height: 60vw;
+        animation: rotate 10s linear infinite reverse;
+      }
+
+      .effect3 {
+        background: url(../svg/effect-move2.svg) 0 0 no-repeat;
+        width: 24vw;
+        height: 24vw;
+        animation: rotate 10s linear infinite;
+      }
+    }
+
+    .lyric {
+      text-align: center;
+    }
+
+    p {
+      font-size: 14px;
+      margin-top: 8px;
+      color: $color1;
+
+      &.current {
+        color: $color;
+      }
+    }
+
+    .panelLyrics {
+      text-align: center;
+      height: calc(100% - 40px);
+      margin-top: -20px;
+      width: 100vw;
+      overflow: hidden;
+
+      .container {
+        transition: all .4s;
+
+        p {
+          color: $color1;
+          line-height: 2;
+          font-size: 14px;
+
+          &.current {
+            color: $color;
+          }
         }
       }
     }
   }
-  .operation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
-    padding: 0 20px;
 
-    svg {
-      width: 28px;
-      height: 28px;
 
-      &.btn-play-pause {
-        width: 50px;
-        height: 50px;
+  footer {
+    height: 180px;
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+
+      svg {
+        width: 24px;
+        height: 24px;
+        margin: 0 20px;
       }
     }
 
+    .barArea {
+      color: $color1;
+      font-size: 12px;
+      display: flex;
+      padding: 0 20px;
+      margin-top: 20px;
+      align-items: center;
+
+      .time-start {
+        order: 1;
+        width: 40px;
+      }
+
+      .time-end {
+        order: 3;
+        width: 40px;
+      }
+
+      .bar {
+        order: 2;
+        flex: 1;
+        height: 4px;
+        background: $color3;
+        border-radius: 2px;
+        margin: 0 10px;
+
+        .progress {
+          width: 0;
+          transition: all .2s;
+          height: 100%;
+          border-radius: 2px;
+          background: $color2;
+          position: relative;
+
+          &::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: -7px;
+            display: block;
+            width: 16px;
+            height: 16px;
+            background: url(../svg/progress.svg) 0 0 no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+    }
+
+    .operation {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      padding: 0 20px;
+
+      svg {
+        width: 28px;
+        height: 28px;
+
+        &.btn-play-pause {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+    }
   }
 }
-
 @keyframes rotate {
   0% {
     transform: rotate(0);
