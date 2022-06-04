@@ -9,7 +9,6 @@ $color3: #0025f1;
 * {
   margin: 0;
   padding: 0;
-
 }
 
 
@@ -97,22 +96,22 @@ $color3: #0025f1;
 
       .effect1 {
         background: url(../svg/effect-no-move.svg) 0 0 no-repeat;
-        width: 70vw;
-        height: 70vw;
+        width: 33vh;
+        height: 33vh;
         animation: rotate 20s linear infinite;
       }
 
       .effect2 {
         background: url(../svg/effect-move1.svg) 0 0 no-repeat;
-        width: 60vw;
-        height: 60vw;
+        width: 28vh;
+        height: 28vh;
         animation: rotate 10s linear infinite reverse;
       }
 
       .effect3 {
         background: url(../svg/effect-move2.svg) 0 0 no-repeat;
-        width: 24vw;
-        height: 24vw;
+        width: 5vw;
+        height: 5vw;
         animation: rotate 10s linear infinite;
       }
     }
