@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#player {
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  background: #060a3d;
+}
+#player header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+  padding-top: 10px;
+}
+#player header h1 {
+  color: #fff;
+  font-size: 30px;
+}
+#player header p {
+  color: #fff;
+}
+#player .balls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+#player .balls span {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #6a134f;
+  margin: 0 4px;
+}
+#player .balls span.current {
+  width: 8px;
+  height: 8px;
+  background: #db3baa;
+}
+#player .panels {
+  display: flex;
+  width: 200vw;
+  height: calc(100vh - 270px);
+  transition: transform 0.3s;
+  align-items: center;
+}
+#player .panels.panel1 {
+  transform: translateX(0vw);
+}
+#player .panels.panel2 {
+  transform: translateX(-100vw);
+}
+#player .panels .panelEffect {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#player .panels .panelEffect .effect {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}
+#player .panels .panelEffect .effect > div {
+  background-size: contain;
+  position: absolute;
+}
+#player .panels .panelEffect .effect .effect1 {
+  background: url(/effect-no-move.e6a51026.svg) 0 0 no-repeat;
+  width: 33vh;
+  height: 33vh;
+  animation: rotate 20s linear infinite;
+  animation-play-state: paused;
+}
+#player .panels .panelEffect .effect .effect2 {
+  background: url(/effect-move1.8d0ce205.svg) 0 0 no-repeat;
+  width: 28vh;
+  height: 28vh;
+  animation: rotate 20s linear reverse infinite;
+  animation-play-state: paused;
+}
+#player .panels .panelEffect .effect .effect3 {
+  background: url(/effect-move2.143040a0.svg) 0 0 no-repeat;
+  width: 5vw;
+  height: 5vw;
+  animation: rotate 20s linear infinite;
+  animation-play-state: paused;
+}
+#player .panels .panelEffect .lyric {
+  text-align: center;
+}
+#player .panels .panelEffect p {
+  font-size: 14px;
+  margin-top: 8px;
+  color: #868aaf;
+}
+#player .panels .panelEffect p.current {
+  color: #fff;
+}
+#player .panels .panelLyrics {
+  text-align: center;
+  height: calc(100% - 40px);
+  margin-top: -20px;
+  width: 100vw;
+  overflow: hidden;
+}
+#player .panels .panelLyrics .container {
+  transition: all 0.4s;
+}
+#player .panels .panelLyrics .container p {
+  color: #868aaf;
+  line-height: 2;
+  font-size: 14px;
+}
+#player .panels .panelLyrics .container p.current {
+  color: #fff;
+}
+#player footer {
+  height: 180px;
+}
+#player footer .buttons {
+  display: flex;
+  justify-content: center;
+}
+#player footer .buttons svg {
+  width: 24px;
+  height: 24px;
+  margin: 0 20px;
+}
+#player footer .barArea {
+  color: #868aaf;
+  font-size: 12px;
+  display: flex;
+  padding: 0 20px;
+  margin-top: 20px;
+  align-items: center;
+}
+#player footer .barArea .time-start {
+  order: 1;
+  width: 40px;
+}
+#player footer .barArea .time-end {
+  order: 3;
+  width: 40px;
+}
+#player footer .barArea .bar {
+  order: 2;
+  flex: 1;
+  height: 4px;
+  background: #0025f1;
+  border-radius: 2px;
+  margin: 0 10px;
+}
+#player footer .barArea .bar .progress {
+  width: 0;
+  transition: all 0.2s;
+  height: 100%;
+  border-radius: 2px;
+  background: #db3baa;
+  position: relative;
+}
+#player footer .barArea .bar .progress::after {
+  content: "";
+  position: absolute;
+  right: -8px;
+  top: -7px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url(/progress.798a5c76.svg) 0 0 no-repeat;
+  background-size: contain;
+}
+#player footer .operation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+#player footer .operation svg {
+  width: 28px;
+  height: 28px;
+}
+#player footer .operation svg.btn-play-pause {
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=/javascript.19a21263.css.map */
