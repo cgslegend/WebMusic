@@ -74,21 +74,21 @@
   position: absolute;
 }
 #player .panels .panelEffect .effect .effect1 {
-  background: url(/effect-no-move.529ac9dc.svg) 0 0 no-repeat;
+  background: url(./effect-no-move.529ac9dc.svg) 0 0 no-repeat;
   width: 33vh;
   height: 33vh;
   animation: rotate 20s linear infinite;
   animation-play-state: paused;
 }
 #player .panels .panelEffect .effect .effect2 {
-  background: url(/effect-move1.1da05f09.svg) 0 0 no-repeat;
+  background: url(./effect-move1.1da05f09.svg) 0 0 no-repeat;
   width: 28vh;
   height: 28vh;
   animation: rotate 20s linear reverse infinite;
   animation-play-state: paused;
 }
 #player .panels .panelEffect .effect .effect3 {
-  background: url(/effect-move2.f309f2d4.svg) 0 0 no-repeat;
+  background: url(./effect-move2.f309f2d4.svg) 0 0 no-repeat;
   width: 5vw;
   height: 5vw;
   animation: rotate 20s linear infinite;
@@ -175,7 +175,7 @@
   display: block;
   width: 16px;
   height: 16px;
-  background: url(/progress.65e5872b.svg) 0 0 no-repeat;
+  background: url(./progress.65e5872b.svg) 0 0 no-repeat;
   background-size: contain;
 }
 #player footer .operation {
