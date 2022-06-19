@@ -2,7 +2,7 @@ export default class Swiper {
     constructor(node) {
         if(!node) throw new Error('需要传递需要绑定的DOM元素')
         let root = typeof node === 'string' ? document.querySelector(node) : node
-        let eventHub = {'swipLeft': [], 'swipRight': []}
+        let eventHub = {'swipeLeft': [], 'swipeRight': []}
         let initX
         let newX
         let clock
@@ -15,9 +15,9 @@ export default class Swiper {
             clock = setTimeout(()=>{
                 newX = e.changedTouches[0].pageX
                 if(newX - initX > 50) {
-                    eventHub['swipRight'].forEach(fn=>fn.bind(root)())
+                    eventHub['swipeRight'].forEach(fn=>fn.bind(root)())
                 } else if(initX - newX > 50) {
-                    eventHub['swipLeft'].forEach(fn=>fn.bind(root)())
+                    eventHub['swipeLeft'].forEach(fn=>fn.bind(root)())
                 }
             }, 100)
         }

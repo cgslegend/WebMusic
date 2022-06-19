@@ -137,8 +137,8 @@ var Swiper = /*#__PURE__*/_createClass(function Swiper(node) {
   if (!node) throw new Error('需要传递需要绑定的DOM元素');
   var root = typeof node === 'string' ? document.querySelector(node) : node;
   var eventHub = {
-    'swipLeft': [],
-    'swipRight': []
+    'swipeLeft': [],
+    'swipeRight': []
   };
   var initX;
   var newX;
@@ -154,11 +154,11 @@ var Swiper = /*#__PURE__*/_createClass(function Swiper(node) {
       newX = e.changedTouches[0].pageX;
 
       if (newX - initX > 50) {
-        eventHub['swipRight'].forEach(function (fn) {
+        eventHub['swipeRight'].forEach(function (fn) {
           return fn.bind(root)();
         });
       } else if (initX - newX > 50) {
-        eventHub['swipLeft'].forEach(function (fn) {
+        eventHub['swipeLeft'].forEach(function (fn) {
           return fn.bind(root)();
         });
       }
@@ -530,7 +530,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "12364" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "9540" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
